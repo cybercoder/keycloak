@@ -1,0 +1,57 @@
+{
+  "name": "@cybercoder/nestjs-keycloak",
+  "version": "1.0.0",
+  "description": "keycloak module for nestjs.",
+  "main": "index.js",
+  "scripts": {
+    "test:watch": "jest --watch",
+    "start:dev": "nest start --watch",
+    "build": "rimraf dist && tsc",
+    "prepublish": "npm run build"
+  },
+  "author": "Vahid Alimohamadi",
+  "license": "MIT",
+  "dependencies": {
+    "@keycloak/keycloak-admin-client": "^18.0.2",
+    "@nestjs/common": "^8.0.0 || ^9.0.0",
+    "openid-client": "^5.1.9",
+    "rxjs": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.8",
+    "@types/node": "^18.7.13",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^28.1.3",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^28.0.8",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^8.0.0 || ^9.0.0",
+    "@nestjs/core": "^8.0.0 || ^9.0.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.2.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "lib",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
